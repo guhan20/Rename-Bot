@@ -12,7 +12,7 @@ async def ping_handler(c: Client, m: "types.Message"):
         return await m.reply_text("I don't know about you sar :(")
     await add_user_to_database(c, m)
     await c.send_flooded_message(
-        chat_id=m.chat.id,
+        chat_id=chat.id,
         text="Hi, I am Rename Bot!\n\n"
              "I can rename media without downloading it!\n"
              "Speed depends on your media DC.\n\n"
@@ -30,7 +30,7 @@ async def help_handler(c: Client, m: "types.Message"):
         return await m.reply_text("I don't know about you sar :(")
     await add_user_to_database(c, m)
     await c.send_flooded_message(
-        chat_id=m.chat.id,
+        chat_id=chat.id,
         text="I can rename media without downloading it!\n"
              "Speed depends on your media DC.\n\n"
              "Just send me media and reply to it with /rename command.\n\n"
